@@ -17,6 +17,11 @@ button {
   font-weight: bold;
 }
 
+.buttons-container {
+  text-align: center; 
+  margin-top: 20px; 
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -26,7 +31,9 @@ table {
   border: 2px solid #354a5f;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%; 
+  margin: 0 auto; 
+  padding: 10px; 
 }
 
 th {
@@ -36,14 +43,14 @@ th {
   padding-bottom: 12px;
   text-align: left;
   background-color: #354a5f;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 tr:nth-child(even) {
-  background-color: #ddd;
+  background-color: #354a5f;
 }
 tr:hover {
-  background-color: #cacacb;
+  background-color: #9f9fef;
 }
 
 td {
@@ -57,4 +64,66 @@ h1 {
   background: #5c94ce;
   color: white;
   font-size: 60px;
+}
+
+body {
+  background-image: url('https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif');
+  background-size: cover;
+  background-color: black; 
+  font-family: Montserrat, Arial, Helvetica, sans-serif; 
+  color: white; 
+}
+
+.flier {
+	pointer-events: none;
+}
+
+.flier > * {
+  width: 350px;
+  height: auto;
+  animation: fly 50s linear infinite;
+  pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
 }
